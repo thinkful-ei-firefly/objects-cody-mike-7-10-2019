@@ -18,8 +18,6 @@ function enrollInSummerSchool(students) {
   let summerSchoolStudents = [];
   for (let i = 0; i < students.length; i++) {
     summerSchoolStudents.push(students[i]);
-  }
-  for (let i = 0; i < summerSchoolStudents.length; i++) {
     summerSchoolStudents[i]['status'] = 'In Summer school';
   }
   console.log(summerSchoolStudents);
@@ -27,8 +25,9 @@ function enrollInSummerSchool(students) {
 }
 
 
-// you can pass in `scratchData` to test out `findByid`
-// your function
+
+
+
 const scratchData = [
   { id: 22, foo: 'bar' },
   { id: 28, foo: 'bizz' },
@@ -36,7 +35,7 @@ const scratchData = [
 ];
 
 function findById(items, idNum) {
-  // your code here
+
 
   for(let i=0; i<items.length; i++){
     if(items[i]['id'] === idNum){
@@ -45,3 +44,18 @@ function findById(items, idNum) {
   }
 }
 
+function validateKeys(object, expectedKeys) {
+  const objectKeys = Object.keys(object);
+  let thisShouldNotExist = 0;
+  if (expectedKeys.length !== objectKeys.length) {
+    return false;
+  }
+  for (let i = 0; i < expectedKeys.length; i++) {
+    console.log(expectedKeys[i]);
+    if (expectedKeys[i] in object) {} 
+    else {
+      return false;
+    }
+  }
+  return true;
+}
