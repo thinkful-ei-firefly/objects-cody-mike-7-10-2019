@@ -25,3 +25,23 @@ function enrollInSummerSchool(students) {
   console.log(summerSchoolStudents);
   return summerSchoolStudents;
 }
+
+
+// you can pass in `scratchData` to test out `findByid`
+// your function
+const scratchData = [
+  { id: 22, foo: 'bar' },
+  { id: 28, foo: 'bizz' },
+  { id: 19, foo: 'bazz' },
+];
+
+function findById(items, idNum) {
+  // your code here
+
+  for(let i=0; i<items.length; i++){
+    if(items[i]['id'] === idNum){
+      return items[i];
+    }
+  }
+}
+
